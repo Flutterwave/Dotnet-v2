@@ -22,10 +22,10 @@ The Flutterwave .NET Library implements the following payment services:
 
 
 The Library also implements the following features:
-1. Tokeniztion
+1. Tokenization
 2. Subaccounts
 4. Currencies.
-5. Pre-Authorisation.
+5. Pre-Authorization.
 6. Refunds.
 
 ## Prerequisites
