@@ -23,13 +23,12 @@ namespace RaveTests
     public class UnitTest1
     {
 
-        //string txRef = Environment.GetEnvironmentVariable("txRef");
-        //string successfulFwRef = Environment.GetEnvironmentVariable("successfulFwRef");
-        //string unCapturedFwRef = Environment.GetEnvironmentVariable("unCapturedFwRef");
-        //string tranxRef = Environment.GetEnvironmentVariable("tranxRef");
-
-        string PbKey = "FLWPUBK_TEST-02b9b5fc6406bd4a41c3ff141cc45e93-X";
-        string ScKey = "FLWSECK_TEST-8f6e118f0435ff485ca8971221ff830e-X";
+        string txRef = Environment.GetEnvironmentVariable("txRef");
+        string successfulFwRef = Environment.GetEnvironmentVariable("successfulFwRef");
+        string unCapturedFwRef = Environment.GetEnvironmentVariable("unCapturedFwRef");
+        string tranxRef = Environment.GetEnvironmentVariable("tranxRef");
+        string PbKey = Environment.GetEnvironmentVariable("PbKey");
+        string ScKey = Environment.GetEnvironmentVariable("ScKey");
 
 
         //Pay with PayPal charge test
