@@ -22,7 +22,7 @@ The Flutterwave .NET Library implements the following payment services:
 
 
 The Library also implements the following features:
-1. Tokeniztion
+1. Tokenization
 2. Subaccounts
 4. Currencies.
 5. Pre-Authorisation.
@@ -62,10 +62,10 @@ var raveConfig = new RaveConfig(PbKey, SCKey, false);
 
 # Payments
 ## Card Payments
-This implements Card payments for Pin, 3D-Secure, VBV and PreAuth transactions.
+This implements Card payments for Pin, 3D-Secure, VBV, and PreAuth transactions.
 
 ## Usage
-1. Complete basic configuration following the configuration steps.
+1. Complete the basic configuration following the configuration steps.
 
 2. Configure the card charge
 ```
@@ -146,7 +146,7 @@ var cha = cardCharge.Charge(Payload).Result;
 This implements direct debit transactions from Bank accounts. 
 
 ## Usage
-1. Complete basic configuration following the configuration steps.
+1. Complete the basic configuration following the configuration steps.
 
 2. Configure the Account charge
 ```
@@ -221,12 +221,12 @@ class Program
 ```
 
 ## Mobile Money Payments
-This implements Mpesa, Ghana, Uganda, Zambia and Rwanda Mobile money transactions for customers.
+This implements M-Pesa, Ghana, Uganda, Zambia, and Rwanda Mobile money transactions for customers.
 
 ## Usage
-1. Complete basic configuration following the configuration steps.
+1. Complete the basic configuration following the configuration steps.
 
-2. Configure the Mobile money charge
+2. Configure the Mobile Money charge.
 ```
 var mobilemoney = new ChargeMobileMoney(raveConfig);
 ```
@@ -248,7 +248,7 @@ var mobilemoney = new ChargeMobileMoney(raveConfig);
 ```
 var Payload = new MobileMoneyParams(PbKey, ScKey, "Anonymous", "customer", "user@example.com",  1055, "GHS", "054709929220", "network", "country", "paymentType", "MC-0292920");
 ```
-The payload parameters differ for different countries, currencies and payment types.
+The payload parameters differ for different countries, currencies, and payment types.
 
 | Country | Payment Type | Country code | Currency | Network |
 | ------- | ------------ | ------------ | -------- | ------- |
@@ -258,7 +258,7 @@ The payload parameters differ for different countries, currencies and payment ty
 | Zambia |  `mobilemoneyzambia` | `NG` | ZMW | `MTN` |
 | Uganda | `mobilemoneyuganda` | `UG` | UGX | `UGX` |
 
-4. Carry out mobile money charge
+4. Carry out the mobile money charge
 ```
 var cha = mobilemoney.Charge(Payload).Result;
 ```
@@ -332,12 +332,12 @@ This API allows you to create and update a new Ebills order.
 ```
 
 ## Tokenization
-This implements Card tokenization for Pin, 3D-Secure, VBV and NoAuth cards.
+This implements Card tokenization for Pin, 3D-Secure, VBV, and NoAuth cards.
 
 ## Usage
-1. Complete basic configuration following the configuration steps.
+1. Complete the basic configuration following the configuration steps.
 
-2. Charge the card using instructions from the Card charge section of the documentation.
+2. Charge the card using instructions from the Card Charge section of the documentation.
 
 3. Configure the tokenized card
 ```
@@ -360,7 +360,7 @@ The payload should contain:
 var Payload = new TokensParams(ScKey, "Anonymous", "Customer", "tester@example.com", tranxref, 2100, "NGN", "NG"){ Token = "flw-t1nf-139d69763063262928b77bc1f4fba199-m03k", Narration = "Test"};
 ```
 
-5. Make tokenized charge.
+5. Make a tokenized charge.
 ```
 var tokenResponse = tokenCard.Charge(tokenparam).Result;
 ```
@@ -391,7 +391,7 @@ var tokenResponse = tokenCard.Charge(tokenparam).Result;
 This implements subaccount creation for split payments.
 
 ## Usage
-1. Complete basic configuration following the configuration steps.
+1. Complete the basic configuration following the configuration steps.
 
 2. Configure the SubAccount
 ```
@@ -442,4 +442,4 @@ var chargeResponse = subacc.Charge(payload).Result;
 ```
 
 ## Support
-For further assistance in using the SDK, you can contact the Developers on [Slack](https://join.slack.com/t/flutterwavedevelopers/shared_invite/enQtNTk3MjgxMjU3ODI5LWFkMjBkYTc0ZGJhM2Q5MTY3YjFkYzAyYmM1ZDZjZjUwMjE4YTc2NjQ1ZGM5ZWE4NDUxMzc4MmExYmI1Yjg5ZWU) and [Email](mailto:developers@flutterwavego.com). You can also check out some awesome Beta features [here](https://developer.flutterwave.com/reference#introduction). 
+For further assistance in using the SDK, you can contact the Developers on [Slack](https://join.slack.com/t/flutterwavedevelopers/shared_invite/enQtNTk3MjgxMjU3ODI5LWFkMjBkYTc0ZGJhM2Q5MTY3YjFkYzAyYmM1ZDZjZjUwMjE4YTc2NjQ1ZGM5ZWE4NDUxMzc4MmExYmI1Yjg5ZWU) and [Email](mailto:developers@flutterwavego.com).
